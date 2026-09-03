@@ -1,0 +1,559 @@
+agora adicione o codigo no css /* ========================================
+   CONFIGURAÇÃO GERAL
+======================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+
+    font-family: sans-serif;
+    text-align: center;
+
+    background-image: url("pictures/gatos.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    padding-top: 60px;
+}
+
+
+/* ========================================
+   CAMADA SOBRE O FUNDO
+======================================== */
+
+
+
+
+/* ========================================
+   PRIMEIRA TELA
+======================================== */
+
+#inicio {
+    max-width: 600px;
+
+    margin: 0 auto;
+
+    padding: 50px 30px;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   DECLARAÇÃO
+======================================== */
+
+#declaracao {
+    display: none;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    padding: 45px 30px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   PÁGINA 2
+======================================== */
+
+#pagina2 {
+    display: none;
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    padding: 40px 35px;
+
+    background: rgba(255, 255, 255, 0.88);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   TEXTOS
+======================================== */
+
+h1 {
+    color: #d6336c;
+}
+
+h2 {
+    color: #c2255c;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+/* ========================================
+   BOTÕES
+======================================== */
+
+button {
+    padding: 15px 25px;
+
+    font-size: 18px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+button:hover {
+    transform: scale(1.05);
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+.sim {
+    background: #ff6b9d;
+
+    color: white;
+
+    margin: 10px;
+}
+
+
+.nao {
+    background: #adb5bd;
+
+    color: white;
+
+    margin: 10px;
+}
+
+
+/* ========================================
+   FOTOS
+======================================== */
+
+#pagina2 img {
+    max-width: 80%;
+
+    margin: 20px;
+
+    border-radius: 15px;
+
+    box-shadow:
+        0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* ========================================
+   PLAYLIST
+======================================== */
+
+#playlist {
+    display: none;
+
+    min-height: 100vh;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+}
+
+
+.spotify-player {
+    width: 100%;
+
+    max-width: 420px;
+
+    margin: 0 auto;
+
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.15);
+
+    text-align: center;
+}
+
+
+#capaMusica {
+    width: 100%;
+
+    max-width: 350px;
+
+    aspect-ratio: 1 / 1;
+
+    object-fit: cover;
+
+    border-radius: 12px;
+
+    display: block;
+
+    margin: 0 auto 25px;
+}
+
+
+#nomeMusica {
+    margin: 0;
+
+    font-size: 30px;
+
+    color: #222;
+}
+
+
+#artistaMusica {
+    margin-top: 8px;
+
+    margin-bottom: 25px;
+
+    font-size: 18px;
+
+    color: #777;
+}
+
+
+/* ========================================
+   CONTROLES
+======================================== */
+
+.controles {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 25px;
+
+    margin: 20px 0;
+}
+
+
+.controles button {
+    border: none;
+
+    background: none;
+
+    font-size: 25px;
+
+    cursor: pointer;
+}
+
+
+#botaoPlay {
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: #222;
+
+    color: white;
+
+    font-size: 25px;
+}
+
+
+/* ========================================
+   BARRA DA MÚSICA
+======================================== */
+
+.barra-container {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+#barraMusica {
+    flex: 1;
+
+    cursor: pointer;
+}
+
+
+/* ========================================
+   VOLUME
+======================================== */
+
+.volume-container {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 20px;
+}
+
+
+#volumeMusica {
+    width: 120px;
+}
+
+
+/* ========================================
+   CORAÇÕES SUBINDO
+======================================== */
+
+.coracao {
+    position: fixed;
+
+    bottom: -50px;
+
+    z-index: 9999;
+
+    pointer-events: none;
+
+    animation-name: subirCoracao;
+
+    animation-timing-function: ease-out;
+
+    animation-fill-mode: forwards;
+}
+
+
+@keyframes subirCoracao {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   TRANSIÇÃO DO JOKER
+======================================== */
+#transicao {
+    display: none;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    z-index: 99999;
+
+    pointer-events: none;
+
+    background: transparent;
+
+    overflow: hidden;
+}
+
+
+#videoJoker {
+    width: 100vw;
+    height: 100vh;
+    object-fit: contain;
+}
+
+#canvasJoker {
+    display: block;
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background: transparent;
+
+    object-fit: contain;
+}
+
+/* ========================================
+   ÚLTIMA PÁGINA
+======================================== */
+
+#final {
+    display: none;
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+/* ========================================
+   MENSAGEM FINAL
+======================================== */
+
+#mensagemFinal {
+    max-width: 650px;
+
+    padding: 45px;
+
+    margin: 20px;
+
+    background: rgba(255, 255, 255, 0.92);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+#mensagemFinal h1 {
+    font-size: 40px;
+}
+
+
+#mensagemFinal h2 {
+    font-size: 30px;
+}
+
+
+#mensagemFinal p {
+    line-height: 1.7;
+}
+
+/* ========================================
+   TRANSIÇÃO ENTRE PÁGINAS
+======================================== */
+
+.transicao-pagina {
+    animation: entrarPagina 0.8s ease;
+}
+
+@keyframes entrarPagina {
+    from {
+        opacity: 0;
+        transform: scale(0.97);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* ========================================
+   BOTÃO NÃO FUGINDO
+======================================== */
+
+#botaoNao {
+    position: relative;
+    transition: left 0.3s ease, top 0.3s ease;
+}
+
+
+/* ========================================
+   CENA DA MORGANA
+======================================== */
+
+#cenaMorgana {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 20px;
+    text-align: center;
+}
+
+#imagemMorgana {
+    max-width: 90%;
+    max-height: 65vh;
+
+    border-radius: 20px;
+
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+
+    margin-bottom: 25px;
+}
+
+#mensagemMorgana {
+    color: white;
+    font-size: 25px;
+    max-width: 700px;
+
+    min-height: 70px;
+
+    transition: opacity 0.4s ease;
+}
+
+#botaoMorgana {
+    margin-top: 15px;
+    background: #ff6b9d;
+    color: white;
+}
